@@ -3,7 +3,17 @@ import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { Heart, MessageSquare, User, Send } from 'lucide-react';
+import { Heart, MessageSquare, User, Send, MoreHorizontal } from 'lucide-react';
+
+interface Comment {
+  id: number;
+  author: string;
+  content: string;
+  timestamp: string;
+  likes: number;
+  isLiked: boolean;
+  replies: Comment[];
+}
 
 interface PostCardProps {
   author: string;
@@ -32,10 +42,38 @@ const PostCard: React.FC<PostCardProps> = ({
   const [likeCount, setLikeCount] = useState(likes);
   const [showComments, setShowComments] = useState(false);
   const [newComment, setNewComment] = useState('');
-  const [commentsList, setCommentsList] = useState([
-    { author: 'Amara Kone', content: 'This is inspiring! Africa rising! 🌍', timestamp: '1h' },
-    { author: 'Kwame Asante', content: 'Great work brother, keep pushing the movement forward!', timestamp: '2h' }
+  const [commentsList, setCommentsList] = useState<Comment[]>([
+    { 
+      id: 1,
+      author: 'Amara Kone', 
+      content: 'This is so inspiring! Our ancestors\' wisdom guides us. Africa rising! 🌍✊🏿', 
+      timestamp: '1h',
+      likes: 12,
+      isLiked: false,
+      replies: [
+        {
+          id: 2,
+          author: 'Kofi Mensah',
+          content: 'Ubuntu philosophy at its finest! "I am because we are"',
+          timestamp: '45m',
+          likes: 5,
+          isLiked: true,
+          replies: []
+        }
+      ]
+    },
+    { 
+      id: 3,
+      author: 'Kwame Asante', 
+      content: 'Great work sister! We must continue to educate our people about our rich heritage. The motherland calls! 🇬🇭🇳🇬🇰🇪', 
+      timestamp: '2h',
+      likes: 8,
+      isLiked: false,
+      replies: []
+    }
   ]);
+  const [replyingTo, setReplyingTo] = useState<number | null>(null);
+  const [replyContent, setReplyContent] = useState('');
 
   const handleLike = () => {
     setLiked(!liked);
@@ -48,13 +86,145 @@ const PostCard: React.FC<PostCardProps> = ({
 
   const handleAddComment = () => {
     if (newComment.trim()) {
-      setCommentsList([
-        ...commentsList,
-        { author: 'You', content: newComment, timestamp: 'now' }
-      ]);
+      const newCommentObj: Comment = {
+        id: Date.now(),
+        author: 'You',
+        content: newComment,
+        timestamp: 'now',
+        likes: 0,
+        isLiked: false,
+        replies: []
+      };
+      setCommentsList([...commentsList, newCommentObj]);
       setNewComment('');
     }
   };
+
+  const handleLikeComment = (commentId: number) => {
+    setCommentsList(prevComments => 
+      prevComments.map(comment => {
+        if (comment.id === commentId) {
+          return {
+            ...comment,
+            isLiked: !comment.isLiked,
+            likes: comment.isLiked ? comment.likes - 1 : comment.likes + 1
+          };
+        }
+        // Handle nested replies
+        return {
+          ...comment,
+          replies: comment.replies.map(reply => {
+            if (reply.id === commentId) {
+              return {
+                ...reply,
+                isLiked: !reply.isLiked,
+                likes: reply.isLiked ? reply.likes - 1 : reply.likes + 1
+              };
+            }
+            return reply;
+          })
+        };
+      })
+    );
+  };
+
+  const handleReplyToComment = (commentId: number) => {
+    if (replyContent.trim()) {
+      const newReply: Comment = {
+        id: Date.now(),
+        author: 'You',
+        content: replyContent,
+        timestamp: 'now',
+        likes: 0,
+        isLiked: false,
+        replies: []
+      };
+
+      setCommentsList(prevComments =>
+        prevComments.map(comment => {
+          if (comment.id === commentId) {
+            return {
+              ...comment,
+              replies: [...comment.replies, newReply]
+            };
+          }
+          return comment;
+        })
+      );
+      setReplyContent('');
+      setReplyingTo(null);
+    }
+  };
+
+  const CommentComponent: React.FC<{ comment: Comment; isReply?: boolean }> = ({ comment, isReply = false }) => (
+    <div className={`flex items-start space-x-2 ${isReply ? 'ml-8 mt-2' : ''}`}>
+      <Avatar className="w-6 h-6">
+        <AvatarFallback className="bg-primary text-white text-xs">
+          {comment.author[0]}
+        </AvatarFallback>
+      </Avatar>
+      <div className="flex-1">
+        <div className="bg-dark-400 rounded-lg p-2">
+          <p className="text-white text-xs font-medium">{comment.author}</p>
+          <p className="text-neutral-300 text-xs">{comment.content}</p>
+        </div>
+        <div className="flex items-center space-x-4 mt-1">
+          <p className="text-neutral-500 text-xs">{comment.timestamp}</p>
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => handleLikeComment(comment.id)}
+            className={`text-xs p-0 h-auto ${comment.isLiked ? 'text-red-500' : 'text-neutral-500'} hover:text-red-500`}
+          >
+            <Heart className={`w-3 h-3 mr-1 ${comment.isLiked ? 'fill-current' : ''}`} />
+            {comment.likes > 0 && comment.likes}
+          </Button>
+          {!isReply && (
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setReplyingTo(replyingTo === comment.id ? null : comment.id)}
+              className="text-xs p-0 h-auto text-neutral-500 hover:text-primary"
+            >
+              Reply
+            </Button>
+          )}
+        </div>
+        
+        {/* Reply Input */}
+        {replyingTo === comment.id && (
+          <div className="flex items-center space-x-2 mt-2">
+            <Avatar className="w-5 h-5">
+              <AvatarFallback className="bg-primary text-white text-xs">
+                You
+              </AvatarFallback>
+            </Avatar>
+            <Input
+              type="text"
+              placeholder={`Reply to ${comment.author}...`}
+              value={replyContent}
+              onChange={(e) => setReplyContent(e.target.value)}
+              onKeyPress={(e) => e.key === 'Enter' && handleReplyToComment(comment.id)}
+              className="flex-1 bg-dark-300 border-neutral-600 text-white placeholder-neutral-400 text-xs h-8"
+            />
+            <Button
+              size="sm"
+              onClick={() => handleReplyToComment(comment.id)}
+              disabled={!replyContent.trim()}
+              className="bg-primary hover:bg-primary/90 text-white disabled:opacity-50 h-8 px-2"
+            >
+              <Send className="w-3 h-3" />
+            </Button>
+          </div>
+        )}
+
+        {/* Render Replies */}
+        {comment.replies.map((reply) => (
+          <CommentComponent key={reply.id} comment={reply} isReply={true} />
+        ))}
+      </div>
+    </div>
+  );
 
   return (
     <Card className="bg-dark-300 border-neutral-600/20 mb-6 animate-fade-in">
@@ -70,6 +240,9 @@ const PostCard: React.FC<PostCardProps> = ({
             <h4 className="text-white font-semibold text-sm">{author}</h4>
             <p className="text-neutral-400 text-xs">@{username} · {timestamp}</p>
           </div>
+          <Button variant="ghost" size="sm" className="text-neutral-400 hover:text-primary">
+            <MoreHorizontal className="w-4 h-4" />
+          </Button>
         </div>
       </CardHeader>
 
@@ -96,8 +269,8 @@ const PostCard: React.FC<PostCardProps> = ({
               liked ? 'text-red-500' : ''
             }`}
           >
-            <Heart className={`w-4 h-4 mr-2 ${liked ? 'fill-current' : ''}`} />
-            <span className="text-xs">{likeCount}</span>
+            <Heart className={`w-5 h-5 mr-2 ${liked ? 'fill-current' : ''}`} />
+            <span className="text-sm font-medium">{likeCount}</span>
           </Button>
 
           <Button
@@ -106,8 +279,8 @@ const PostCard: React.FC<PostCardProps> = ({
             onClick={handleComment}
             className="text-neutral-400 hover:text-primary hover:bg-primary/10 transition-colors"
           >
-            <MessageSquare className="w-4 h-4 mr-2" />
-            <span className="text-xs">{comments}</span>
+            <MessageSquare className="w-5 h-5 mr-2" />
+            <span className="text-sm font-medium">{comments}</span>
           </Button>
         </div>
 
@@ -115,25 +288,12 @@ const PostCard: React.FC<PostCardProps> = ({
         {showComments && (
           <div className="w-full space-y-3">
             {/* Existing Comments */}
-            {commentsList.map((comment, index) => (
-              <div key={index} className="flex items-start space-x-2">
-                <Avatar className="w-6 h-6">
-                  <AvatarFallback className="bg-primary text-white text-xs">
-                    {comment.author[0]}
-                  </AvatarFallback>
-                </Avatar>
-                <div className="flex-1">
-                  <div className="bg-dark-400 rounded-lg p-2">
-                    <p className="text-white text-xs font-medium">{comment.author}</p>
-                    <p className="text-neutral-300 text-xs">{comment.content}</p>
-                  </div>
-                  <p className="text-neutral-500 text-xs mt-1">{comment.timestamp}</p>
-                </div>
-              </div>
+            {commentsList.map((comment) => (
+              <CommentComponent key={comment.id} comment={comment} />
             ))}
 
             {/* Add Comment Input */}
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 pt-2 border-t border-neutral-600/20">
               <Avatar className="w-6 h-6">
                 <AvatarFallback className="bg-primary text-white text-xs">
                   You
@@ -141,7 +301,7 @@ const PostCard: React.FC<PostCardProps> = ({
               </Avatar>
               <Input
                 type="text"
-                placeholder="Add a comment..."
+                placeholder="Share your thoughts on African heritage..."
                 value={newComment}
                 onChange={(e) => setNewComment(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleAddComment()}
