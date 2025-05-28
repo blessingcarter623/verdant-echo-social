@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Calendar, Clock, BookOpen } from 'lucide-react';
+import { Calendar, Clock } from 'lucide-react';
 
 const Blog = () => {
   const articles = [
@@ -59,13 +59,12 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-dark-100 pb-16">
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        {/* Header */}
+        {/* Minimal Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-white mb-2 flex items-center">
-            <BookOpen className="w-8 h-8 mr-3 text-primary" />
-            African Heritage Blog
+          <h1 className="text-2xl font-bold text-white mb-2">
+            African Heritage
           </h1>
-          <p className="text-neutral-400">Celebrating our rich history, culture, and achievements</p>
+          <p className="text-neutral-400">Celebrating our rich history and achievements</p>
         </div>
 
         {/* Categories */}

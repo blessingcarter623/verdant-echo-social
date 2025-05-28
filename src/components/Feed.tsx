@@ -54,8 +54,8 @@ const Feed = () => {
 
   return (
     <div className="max-w-2xl mx-auto pt-4">
-      <CreatePost />
       <Stories />
+      <CreatePost />
       <div className="space-y-0">
         {samplePosts.map((post, index) => (
           <PostCard
