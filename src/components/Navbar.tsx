@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import { Home, Search, Plus, Bell, User, Message, Camera } from 'lucide-react';
+import { Home, Search, Plus, Bell, User, MessageSquare, Camera } from 'lucide-react';
 
 const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -75,7 +75,7 @@ const Navbar = () => {
             {/* Messages */}
             <div className="relative">
               <Button variant="ghost" size="sm" className="text-neutral-400 hover:text-primary hover:bg-dark-300">
-                <Message className="w-5 h-5" />
+                <MessageSquare className="w-5 h-5" />
                 {unreadMessages > 0 && (
                   <Badge variant="destructive" className="absolute -top-1 -right-1 w-5 h-5 text-xs p-0 flex items-center justify-center">
                     {unreadMessages > 9 ? '9+' : unreadMessages}

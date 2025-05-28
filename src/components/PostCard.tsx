@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
-import { Heart, Message, User } from 'lucide-react';
+import { Heart, MessageSquare, User } from 'lucide-react';
 
 interface PostCardProps {
   author: string;
@@ -85,7 +85,7 @@ const PostCard: React.FC<PostCardProps> = ({
             size="sm"
             className="text-neutral-400 hover:text-primary hover:bg-primary/10 transition-colors"
           >
-            <Message className="w-4 h-4 mr-2" />
+            <MessageSquare className="w-4 h-4 mr-2" />
             <span className="text-xs">{comments}</span>
           </Button>
         </div>
