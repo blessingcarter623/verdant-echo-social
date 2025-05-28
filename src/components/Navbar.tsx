@@ -1,15 +1,12 @@
 
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import { Home, Search, Plus, Bell, User, MessageSquare, Camera } from 'lucide-react';
+import { Home, Search, Plus, Bell, User, MessageSquare, BookOpen } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
-  const [searchQuery, setSearchQuery] = useState('');
   const [unreadMessages] = useState(3);
   const [unreadNotifications] = useState(5);
   const navigate = useNavigate();
@@ -31,7 +28,7 @@ const Navbar = () => {
           </div>
 
           {/* Navigation Icons - Centered on mobile */}
-          <div className="flex items-center justify-center space-x-6 flex-1 lg:flex-none">
+          <div className="flex items-center justify-center space-x-4 flex-1 lg:flex-none">
             {/* Home */}
             <Button 
               variant="ghost" 
@@ -52,6 +49,17 @@ const Navbar = () => {
             >
               <Search className="w-5 h-5" />
               <span className="text-xs mt-1 hidden sm:block">Search</span>
+            </Button>
+
+            {/* Blog */}
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              className="text-neutral-400 hover:text-primary hover:bg-dark-300 flex-col p-2"
+              onClick={() => navigate('/blog')}
+            >
+              <BookOpen className="w-5 h-5" />
+              <span className="text-xs mt-1 hidden sm:block">Blog</span>
             </Button>
 
             {/* Create Post */}

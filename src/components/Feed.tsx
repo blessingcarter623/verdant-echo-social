@@ -2,6 +2,7 @@
 import React from 'react';
 import PostCard from './PostCard';
 import CreatePost from './CreatePost';
+import Stories from './Stories';
 
 const Feed = () => {
   const samplePosts = [
@@ -54,6 +55,7 @@ const Feed = () => {
   return (
     <div className="max-w-2xl mx-auto">
       <CreatePost />
+      <Stories />
       <div className="space-y-0">
         {samplePosts.map((post, index) => (
           <PostCard
