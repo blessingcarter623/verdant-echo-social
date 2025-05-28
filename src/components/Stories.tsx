@@ -9,40 +9,40 @@ const Stories = () => {
   const [stories] = useState([
     {
       id: 1,
-      author: 'Kwame Asante',
-      username: 'kwameasante',
+      author: 'Kemi Adebayo',
+      username: 'kemiadebayo',
       hasStory: true,
       isViewed: false,
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face'
-    },
-    {
-      id: 2,
-      author: 'Amina Sankara',
-      username: 'aminasankara',
-      hasStory: true,
-      isViewed: true,
       avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face'
     },
     {
+      id: 2,
+      author: 'David Ochieng',
+      username: 'davidochieng',
+      hasStory: true,
+      isViewed: true,
+      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face'
+    },
+    {
       id: 3,
-      author: 'Ubuntu Collective',
-      username: 'ubuntucollective',
+      author: 'Amina Hassan',
+      username: 'aminahassan',
       hasStory: true,
       isViewed: false,
       avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=face'
     },
     {
       id: 4,
-      author: 'Marcus Garvey Jr.',
-      username: 'garveylegacy',
+      author: 'Joseph Mensah',
+      username: 'josephmensah',
       hasStory: true,
       isViewed: false,
       avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
     },
     {
       id: 5,
-      author: 'Nzinga Warrior',
-      username: 'nzingawarrior',
+      author: 'Fatou Diallo',
+      username: 'fatoudiallo',
       hasStory: true,
       isViewed: true,
       avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face'
