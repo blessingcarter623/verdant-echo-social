@@ -6,8 +6,7 @@ import Sidebar from '@/components/Sidebar';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-dark-100">
-      <Navbar />
+    <div className="min-h-screen bg-dark-100 pb-16">
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           {/* Main Feed */}
@@ -17,12 +16,13 @@ const Index = () => {
           
           {/* Right Sidebar */}
           <div className="hidden lg:block">
-            <div className="sticky top-24">
+            <div className="sticky top-6">
               <Sidebar />
             </div>
           </div>
         </div>
       </main>
+      <Navbar />
     </div>
   );
 };
