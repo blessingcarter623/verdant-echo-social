@@ -34,10 +34,10 @@ const Navbar = () => {
                 <Button 
                   variant="ghost" 
                   size="sm" 
-                  className="text-neutral-400 hover:text-primary hover:bg-dark-300 p-2"
+                  className="text-neutral-400 hover:text-primary hover:bg-dark-300 p-3"
                   onClick={() => navigate('/notifications')}
                 >
-                  <Bell className="w-6 h-6" />
+                  <Bell className="w-7 h-7" />
                   {unreadNotifications > 0 && (
                     <Badge variant="destructive" className="absolute -top-1 -right-1 w-5 h-5 text-xs p-0 flex items-center justify-center">
                       {unreadNotifications > 9 ? '9+' : unreadNotifications}
@@ -50,13 +50,13 @@ const Navbar = () => {
               <Button 
                 variant="ghost" 
                 size="sm" 
-                className="text-neutral-400 hover:text-primary hover:bg-dark-300 p-2"
+                className="text-neutral-400 hover:text-primary hover:bg-dark-300 p-3"
                 onClick={() => navigate('/profile')}
               >
-                <Avatar className="w-8 h-8">
+                <Avatar className="w-9 h-9">
                   <AvatarImage src="/placeholder.svg" alt="Profile" />
                   <AvatarFallback className="bg-primary text-white text-sm">
-                    <User className="w-4 h-4" />
+                    <User className="w-5 h-5" />
                   </AvatarFallback>
                 </Avatar>
               </Button>
@@ -68,37 +68,37 @@ const Navbar = () => {
       {/* Bottom navigation */}
       <nav className="fixed bottom-0 left-0 right-0 z-50 w-full bg-dark-100/95 backdrop-blur-md border-t border-neutral-600/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center h-16">
-            {/* Navigation Icons - Centered */}
-            <div className="flex items-center justify-center space-x-8">
+          <div className="flex items-center justify-center h-20">
+            {/* Navigation Icons - Centered with larger size */}
+            <div className="flex items-center justify-center space-x-12">
               {/* Home */}
               <Button 
                 variant="ghost" 
-                size="sm" 
-                className="text-neutral-400 hover:text-primary hover:bg-dark-300 flex-col p-2"
+                size="lg" 
+                className="text-neutral-400 hover:text-primary hover:bg-dark-300 flex-col p-4 h-16"
                 onClick={() => navigate('/')}
               >
-                <Home className="w-6 h-6" />
+                <Home className="w-8 h-8" />
                 <span className="text-xs mt-1 hidden sm:block">Home</span>
               </Button>
 
               {/* Search */}
               <Button 
                 variant="ghost" 
-                size="sm" 
-                className="text-neutral-400 hover:text-primary hover:bg-dark-300 flex-col p-2"
+                size="lg" 
+                className="text-neutral-400 hover:text-primary hover:bg-dark-300 flex-col p-4 h-16"
                 onClick={() => navigate('/search')}
               >
-                <Search className="w-6 h-6" />
+                <Search className="w-8 h-8" />
                 <span className="text-xs mt-1 hidden sm:block">Search</span>
               </Button>
 
               {/* Create Post */}
               <Button 
-                size="sm" 
-                className="bg-primary hover:bg-primary/90 text-white flex-col p-2"
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-white flex-col p-4 h-16"
               >
-                <Plus className="w-6 h-6" />
+                <Plus className="w-8 h-8" />
                 <span className="text-xs mt-1 hidden sm:block">Post</span>
               </Button>
 
@@ -106,11 +106,11 @@ const Navbar = () => {
               <div className="relative">
                 <Button 
                   variant="ghost" 
-                  size="sm" 
-                  className="text-neutral-400 hover:text-primary hover:bg-dark-300 flex-col p-2"
+                  size="lg" 
+                  className="text-neutral-400 hover:text-primary hover:bg-dark-300 flex-col p-4 h-16"
                   onClick={() => navigate('/messages')}
                 >
-                  <MessageSquare className="w-6 h-6" />
+                  <MessageSquare className="w-8 h-8" />
                   <span className="text-xs mt-1 hidden sm:block">Messages</span>
                   {unreadMessages > 0 && (
                     <Badge variant="destructive" className="absolute -top-1 -right-1 w-5 h-5 text-xs p-0 flex items-center justify-center">
@@ -123,12 +123,12 @@ const Navbar = () => {
               {/* Blog */}
               <Button 
                 variant="ghost" 
-                size="sm" 
-                className="text-neutral-400 hover:text-primary hover:bg-dark-300 flex-col p-2"
+                size="lg" 
+                className="text-neutral-400 hover:text-primary hover:bg-dark-300 flex-col p-4 h-16"
                 onClick={() => navigate('/blog')}
               >
-                <BookOpen className="w-6 h-6" />
-                <span className="text-xs mt-1 hidden sm:block">Blog</span>
+                <BookOpen className="w-8 h-8" />
+                <span className="text-xs mt-1 hidden sm:block">Heritage</span>
               </Button>
             </div>
           </div>

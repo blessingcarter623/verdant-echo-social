@@ -9,31 +9,45 @@ const Notifications = () => {
   const notifications = [
     {
       type: 'like',
-      user: 'Thabo Mokwena',
-      action: 'liked your post about Heritage Day',
+      user: 'Kwame Nkrumah Jr.',
+      action: 'liked your post about Marcus Garvey\'s teachings',
       time: '2 minutes ago',
       icon: Heart
     },
     {
       type: 'comment',
-      user: 'Nomsa Dlamini',
-      action: 'commented on your braai photo',
+      user: 'Amina Sankara',
+      action: 'commented on your tribute to Thomas Sankara',
       time: '15 minutes ago',
       icon: MessageSquare
     },
     {
       type: 'follow',
-      user: 'Pieter van der Merwe',
+      user: 'Mandela Legacy',
       action: 'started following you',
       time: '1 hour ago',
       icon: UserPlus
     },
     {
       type: 'like',
-      user: 'Aisha Patel',
-      action: 'liked your sunset photo from Cape Town',
+      user: 'Ubuntu Collective',
+      action: 'liked your post about African unity and Ubuntu philosophy',
       time: '3 hours ago',
       icon: Heart
+    },
+    {
+      type: 'comment',
+      user: 'Nzinga Warrior',
+      action: 'commented on your Queen Nzinga historical post',
+      time: '5 hours ago',
+      icon: MessageSquare
+    },
+    {
+      type: 'follow',
+      user: 'Panafrika Rising',
+      action: 'started following you',
+      time: '1 day ago',
+      icon: UserPlus
     }
   ];
 

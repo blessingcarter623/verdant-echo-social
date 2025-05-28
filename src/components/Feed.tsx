@@ -7,47 +7,47 @@ import Stories from './Stories';
 const Feed = () => {
   const samplePosts = [
     {
-      author: 'Kemi Adebayo',
-      username: 'kemiadebayo',
-      content: "Just launched our new fintech platform connecting rural communities across Nigeria! 🚀 Excited to bridge the digital divide and bring financial services to everyone. #FinTechAfrica #DigitalInclusion",
+      author: 'Kwame Asante',
+      username: 'kwameasante',
+      content: "Today marks 47 years since Steve Biko's assassination. His words still echo: 'The most potent weapon in the hands of the oppressor is the mind of the oppressed.' Let's continue the consciousness movement! ✊🏿 #SteveBiko #BlackConsciousness #NeverForget",
       timestamp: '2h',
-      likes: 45,
-      comments: 12,
+      likes: 892,
+      comments: 156,
       image: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400'
     },
     {
-      author: 'David Ochieng',
-      username: 'davidochieng',
-      content: "The future of African tech is so bright! 🌍✨ From AI startups in Kenya to blockchain innovations in South Africa, we're building solutions that matter. What's your favorite African tech story this week?",
+      author: 'Amina Sankara',
+      username: 'aminasankara',
+      content: "Reading Thomas Sankara's speeches tonight. 'Our revolution in Burkina Faso draws on the totality of man's experiences since the first breath of humanity.' Africa's true leaders understood Pan-African unity long before it was fashionable. 🌍📚",
       timestamp: '4h',
-      likes: 89,
-      comments: 23,
+      likes: 567,
+      comments: 89,
       isLiked: true
     },
     {
-      author: 'Amina Hassan',
-      username: 'aminahassan',
-      content: "Attending the African Women in Tech conference in Lagos next week! Looking forward to connecting with incredible women who are changing the game. Anyone else going? Let's meet up! 💪🏾 #WomenInTech #Lagos",
+      author: 'Ubuntu Collective',
+      username: 'ubuntucollective',
+      content: "Ubuntu teaching moment: 'I am because we are, and since we are, therefore I am.' Our ancestors knew that individualism was foreign to African consciousness. Community over competition, always. Let's decolonize our minds! 🤝🏿 #Ubuntu #AfricanPhilosophy",
       timestamp: '6h',
-      likes: 156,
-      comments: 34,
+      likes: 1234,
+      comments: 234,
       image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400'
     },
     {
-      author: 'Joseph Mensah',
-      username: 'josephmensah',
-      content: "Building sustainable tech solutions in Ghana 🇬🇭 Our solar-powered internet hubs are now serving 50+ communities. Technology should uplift everyone, everywhere! #SustainableTech #Ghana #Innovation",
+      author: 'Marcus Garvey Jr.',
+      username: 'garveylegacy',
+      content: "My grandfather said: 'A people without the knowledge of their past history is like a tree without roots.' Today's young Africans must know their true history - not the colonizer's version. Knowledge is power! 📖⚡ #MarcusGarvey #BlackPride #AfricanHistory",
       timestamp: '8h',
-      likes: 203,
-      comments: 67
+      likes: 445,
+      comments: 78
     },
     {
-      author: 'Fatou Diallo',
-      username: 'fatoudiallo',
-      content: "Coding bootcamp graduates just got their first jobs! 🎉 So proud of these amazing developers from Senegal, Mali, and Burkina Faso. The next generation of African developers is here! #CodingBootcamp #AfricanDevelopers",
+      author: 'Nzinga Warrior',
+      username: 'nzingawarrior',
+      content: "Queen Nzinga fought Portuguese colonizers for 40 years and never surrendered. African women have always been warriors and leaders. Don't let anyone tell you different! Our strength runs deep. 👑⚔️ #QueenNzinga #AfricanQueens #BlackGirlMagic",
       timestamp: '12h',
-      likes: 78,
-      comments: 19,
+      likes: 678,
+      comments: 123,
       image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400'
     }
   ];

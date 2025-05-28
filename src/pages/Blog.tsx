@@ -4,68 +4,75 @@ import Navbar from '@/components/Navbar';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Calendar, Clock, BookOpen } from 'lucide-react';
+import { Calendar, Clock } from 'lucide-react';
 
 const Blog = () => {
   const articles = [
     {
-      title: 'The Great Zimbabwe: Ancient African Civilization',
-      excerpt: 'Exploring the magnificent stone city that gave Zimbabwe its name and showcased African architectural prowess.',
+      title: 'The Great Zimbabwe: Monument to African Civilization',
+      excerpt: 'Exploring the magnificent stone city that showcased African architectural genius and disproves colonial myths about African capability.',
       author: 'Dr. Nomsa Mthembu',
-      category: 'History',
+      category: 'Ancient Kingdoms',
       readTime: '8 min read',
       publishDate: '2 days ago',
       image: 'https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400',
       featured: true
     },
     {
-      title: 'Ubuntu Philosophy: The Heart of African Community',
-      excerpt: 'Understanding the profound African philosophy that emphasizes our interconnectedness and shared humanity.',
+      title: 'Marcus Garvey: The Father of Pan-Africanism',
+      excerpt: 'How Marcus Garvey\'s vision of African unity and black pride ignited a global movement for liberation and consciousness.',
       author: 'Prof. Kwame Asante',
-      category: 'Culture',
+      category: 'Liberation Leaders',
       readTime: '6 min read',
       publishDate: '1 week ago',
       image: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400'
     },
     {
-      title: 'Timbuktu: The Golden Age of Learning',
-      excerpt: 'How this ancient Mali city became a beacon of knowledge and Islamic scholarship in medieval Africa.',
+      title: 'Timbuktu: When Africa Led the World in Learning',
+      excerpt: 'The golden age of scholarship in Mali when African scholars preserved and advanced human knowledge while Europe was in darkness.',
       author: 'Dr. Aisha Diabaté',
-      category: 'History',
+      category: 'Ancient Kingdoms',
       readTime: '10 min read',
       publishDate: '2 weeks ago',
       image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400'
     },
     {
-      title: 'Modern African Tech Innovation',
-      excerpt: 'From mobile money to agricultural tech, how Africa is leading global innovation in the 21st century.',
-      author: 'David Ochieng',
-      category: 'Technology',
+      title: 'Ubuntu Philosophy: Our Interconnected Humanity',
+      excerpt: 'Understanding the African philosophy that teaches "I am because we are" - a foundation for community and consciousness.',
+      author: 'Prof. Mandla Buthelezi',
+      category: 'Philosophy',
       readTime: '7 min read',
       publishDate: '3 weeks ago'
     },
     {
-      title: 'The Kingdoms of Kush: Rivals to Egypt',
-      excerpt: 'Discovering the powerful Nubian kingdoms that once ruled both Sudan and Egypt.',
+      title: 'Queen Nzinga: The Warrior Queen of Angola',
+      excerpt: 'The fearless leader who resisted Portuguese colonization and showed that African women were powerful rulers and warriors.',
       author: 'Dr. Fatima Hassan',
-      category: 'History',
+      category: 'Liberation Leaders',
       readTime: '9 min read',
+      publishDate: '1 month ago'
+    },
+    {
+      title: 'Thomas Sankara: Africa\'s Che Guevara',
+      excerpt: 'How Burkina Faso\'s revolutionary leader showed that true independence means self-reliance and putting people before profit.',
+      author: 'Amina Sankara',
+      category: 'Liberation Leaders',
+      readTime: '8 min read',
       publishDate: '1 month ago'
     }
   ];
 
-  const categories = ['All', 'History', 'Culture', 'Technology', 'Politics', 'Arts'];
+  const categories = ['All', 'Ancient Kingdoms', 'Liberation Leaders', 'Philosophy', 'Pan-Africanism', 'Consciousness'];
 
   return (
     <div className="min-h-screen bg-dark-100 pb-16">
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-white mb-2 flex items-center">
-            <BookOpen className="w-8 h-8 mr-3 text-primary" />
-            African Heritage Blog
+        {/* Minimal Header */}
+        <div className="mb-8 text-center">
+          <h1 className="text-4xl font-bold text-white mb-2">
+            African Heritage
           </h1>
-          <p className="text-neutral-400">Celebrating our rich history, culture, and achievements</p>
+          <p className="text-neutral-400">Consciousness through knowledge</p>
         </div>
 
         {/* Categories */}
