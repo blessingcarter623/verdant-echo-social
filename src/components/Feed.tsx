@@ -53,7 +53,7 @@ const Feed = () => {
   ];
 
   return (
-    <div className="max-w-2xl mx-auto">
+    <div className="max-w-2xl mx-auto pt-4">
       <CreatePost />
       <Stories />
       <div className="space-y-0">
