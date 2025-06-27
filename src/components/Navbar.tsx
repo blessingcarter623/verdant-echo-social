@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
-import { Home, Search, Plus, Bell, User, MessageSquare, BookOpen, Users } from 'lucide-react';
+import { Home, Search, Plus, Bell, User, MessageSquare, BookOpen, Users, Calendar } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
@@ -88,6 +88,17 @@ const Navbar = () => {
               >
                 <Search className="w-6 h-6" />
                 <span className="text-xs mt-1 hidden sm:block">Search</span>
+              </Button>
+
+              {/* Events */}
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                className="text-gray-400 hover:text-green-400 hover:bg-gray-800 flex-col p-2"
+                onClick={() => navigate('/events')}
+              >
+                <Calendar className="w-6 h-6" />
+                <span className="text-xs mt-1 hidden sm:block">Events</span>
               </Button>
 
               {/* Groups */}

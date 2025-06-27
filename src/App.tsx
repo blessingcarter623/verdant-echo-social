@@ -14,6 +14,7 @@ import Profile from "./pages/Profile";
 import Notifications from "./pages/Notifications";
 import Groups from "./pages/Groups";
 import Blog from "./pages/Blog";
+import Events from "./pages/Events";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -44,6 +45,7 @@ const App = () => {
             <Route path="/notifications" element={<Notifications />} />
             <Route path="/groups" element={<Groups />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/events" element={<Events />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
