@@ -26,7 +26,7 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#34C759',
+					DEFAULT: '#16A34A', // Green-600
 					foreground: '#FFFFFF'
 				},
 				secondary: {
@@ -34,7 +34,7 @@ export default {
 					foreground: 'hsl(var(--secondary-foreground))'
 				},
 				destructive: {
-					DEFAULT: 'hsl(var(--destructive))',
+					DEFAULT: '#DC2626', // Red-600
 					foreground: 'hsl(var(--destructive-foreground))'
 				},
 				muted: {
@@ -42,7 +42,7 @@ export default {
 					foreground: 'hsl(var(--muted-foreground))'
 				},
 				accent: {
-					DEFAULT: '#34C759',
+					DEFAULT: '#16A34A', // Green-600
 					foreground: '#FFFFFF'
 				},
 				popover: {
@@ -63,12 +63,18 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom social media colors
+				// Pan-African color scheme
+				panAfrican: {
+					red: '#DC2626',
+					black: '#000000',
+					green: '#16A34A'
+				},
+				// Custom dark theme colors
 				dark: {
-					100: '#1A1D23',
-					200: '#0D1117',
-					300: '#161B22',
-					400: '#21262D'
+					100: '#000000', // Pure black from image
+					200: '#0A0A0A',
+					300: '#1A1A1A',
+					400: '#2A2A2A'
 				},
 				neutral: {
 					400: '#8E8E93',

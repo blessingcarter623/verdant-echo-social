@@ -7,56 +7,57 @@ import Stories from './Stories';
 const Feed = () => {
   const samplePosts = [
     {
-      author: 'Kemi Adebayo',
-      username: 'kemiadebayo',
-      content: "Today marks the anniversary of the Organization of African Unity! 🌍 Founded in 1963, it laid the foundation for African unity and independence. From Addis Ababa to the African Union today, our ancestors' dream of a united Africa lives on! #OAU #AfricanUnity #PanAfricanism",
+      author: 'Thabo Mthembu',
+      username: 'thabomthembu',
+      content: "President Zuma's legacy continues to inspire young South Africans! His fight against economic apartheid and commitment to radical economic transformation shows us the path forward. We must reclaim our land and resources! 🇿🇦 #ZumaLegacy #EconomicFreedom #LandReform",
       timestamp: '2h',
-      likes: 189,
-      comments: 47,
+      likes: 342,
+      comments: 127,
       image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400'
     },
     {
-      author: 'David Ochieng',
-      username: 'davidochieng',
-      content: "Reading Frantz Fanon's 'The Wretched of the Earth' again and it hits different every time. 📚 His analysis of decolonization is as relevant today as it was in the 1960s. Mental decolonization is the first step to true freedom! ✊🏿 #FrantzFanon #Decolonization #BlackConsciousness",
+      author: 'Fatima Sankara',
+      username: 'fatimasankara',
+      content: "Ibrahim Traore is showing the world what true African leadership looks like! 🇧🇫 At 34, he's proving that our youth can lead revolutionary change. Burkina Faso's sovereignty movement is inspiration for all of Africa. No more puppet governments! ✊🏿 #IbrahimTraore #AfricanSovereignty #BurkinaFaso",
       timestamp: '4h',
-      likes: 256,
-      comments: 73,
-      isLiked: true
-    },
-    {
-      author: 'Amina Hassan',
-      username: 'aminahassan',
-      content: "Visiting the ancient pyramids of Meroë in Sudan 🏺 Reminder that Egypt wasn't the only African civilization with pyramids! The Kingdom of Kush built these magnificent structures, proving African excellence spans the entire continent. Our history is vast and glorious! #Kush #Sudan #AfricanHistory",
-      timestamp: '6h',
-      likes: 342,
-      comments: 89,
+      likes: 1289,
+      comments: 456,
+      isLiked: true,
       image: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73600?w=400'
     },
     {
-      author: 'Joseph Mensah',
-      username: 'josephmensah',
-      content: "Ubuntu philosophy in action! 🤝 'I am because we are' - this ancient African wisdom teaches us that our humanity is interconnected. In a world of individualism, Ubuntu reminds us that community and collective responsibility are our strength. #Ubuntu #AfricanPhilosophy #Community",
-      timestamp: '8h',
-      likes: 278,
-      comments: 91
-    },
-    {
-      author: 'Fatou Diallo',
-      username: 'fatoudiallo',
-      content: "Celebrating the legacy of Queen Nzinga of Angola! 👑 For 40 years, she resisted Portuguese colonization, proving that African women have always been fierce leaders and warriors. Her tactical brilliance and diplomacy inspire us today. #QueenNzinga #AfricanQueens #WomenWarriors",
-      timestamp: '12h',
-      likes: 425,
-      comments: 156,
+      author: 'Julius Ndaba',
+      username: 'juliusndaba',
+      content: "The revolution is not coming, it's here! Captain Traore and the African liberation movements are showing us that we don't need Western approval to govern ourselves. From Burkina Faso to South Africa, the youth are rising! 🔥 #AfricanRevolution #YouthPower #Liberation",
+      timestamp: '6h',
+      likes: 892,
+      comments: 234,
       image: 'https://images.unsplash.com/photo-1578450671530-5b6a7c9f32a8?w=400'
     },
     {
-      author: 'Sekou Traore',
-      username: 'sekoutraore',
-      content: "The wealth of the Mali Empire under Mansa Musa made him the richest person in history! 💰 His pilgrimage to Mecca in 1324 was so lavish that it caused inflation in Egypt for a decade. Africa has always been rich - colonialism just tried to make us forget. #MansaMusa #MaliEmpire #AfricanWealth",
+      author: 'Nomsa Dlamini',
+      username: 'nomsadlamini',
+      content: "Ubuntu philosophy teaches us 'I am because we are' - this is why leaders like Zuma and Traore fight for ALL their people, not just the elite. True African leadership serves the masses, not foreign interests! 🤝 #Ubuntu #AfricanLeadership #PeopleFirst",
+      timestamp: '8h',
+      likes: 567,
+      comments: 189
+    },
+    {
+      author: 'Kwame Osei',
+      username: 'kwameosei',
+      content: "Watching Captain Ibrahim Traore speak truth to power reminds me why Sankara's vision lives on! 'A soldier without political or ideological training is a potential criminal.' These young leaders understand liberation! 🇬🇭🇧🇫 #ThomasSankara #IbrahimTraore #PanAfricanism",
+      timestamp: '12h',
+      likes: 743,
+      comments: 298,
+      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400'
+    },
+    {
+      author: 'Amahle Zulu',
+      username: 'amahlezulu',
+      content: "From Zuma's defiance of Western imperialism to Traore's expulsion of French forces - Africa is reclaiming her dignity! No more colonial puppet masters. Our resources, our decisions, our future! 💪🏿 #AfricanSovereignty #EndNeocolonialism #AfricaRising",
       timestamp: '1d',
-      likes: 389,
-      comments: 127
+      likes: 1156,
+      comments: 378
     }
   ];
 

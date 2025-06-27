@@ -5,44 +5,44 @@
 
 @layer base {
   :root {
-    --background: 218 11% 8%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 0%; /* Pure black */
+    --foreground: 0 0% 100%; /* Pure white */
 
-    --card: 218 11% 10%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 10%; /* Dark gray */
+    --card-foreground: 0 0% 100%;
 
-    --popover: 218 11% 10%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 134 61% 48%;
+    --primary: 142 76% 36%; /* Green-600 */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 0 0% 16%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 0 0% 16%;
+    --muted-foreground: 0 0% 64%;
 
-    --accent: 134 61% 48%;
+    --accent: 142 76% 36%; /* Green-600 */
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%; /* Red-600 */
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 134 61% 48%;
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 142 76% 36%; /* Green-600 */
 
     --radius: 0.5rem;
 
-    --sidebar-background: 218 11% 8%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 134 61% 48%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 134 61% 48%;
+    --sidebar-background: 0 0% 0%;
+    --sidebar-foreground: 0 0% 26%;
+    --sidebar-primary: 142 76% 36%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 95%;
+    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-border: 0 0% 16%;
+    --sidebar-ring: 142 76% 36%;
   }
 }
 
@@ -52,14 +52,14 @@
   }
 
   body {
-    @apply bg-dark-100 text-foreground font-sans;
+    @apply bg-black text-foreground font-sans;
     padding-top: 3.5rem; /* Account for top navbar */
     padding-bottom: 4rem; /* Account for bottom navbar */
   }
 
   html {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
+    background-color: #000000; /* Pure black */
+    color: #FFFFFF; /* Pure white */
   }
 }
 
@@ -69,7 +69,7 @@
   }
   
   .glass-effect {
-    @apply bg-dark-300/80 backdrop-blur-md border border-neutral-600/20;
+    @apply bg-gray-900/80 backdrop-blur-md border border-gray-700/20;
   }
 
   .scrollbar-hide {
