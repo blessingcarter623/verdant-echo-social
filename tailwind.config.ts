@@ -26,8 +26,8 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#16A34A', // Green-600
-					foreground: '#FFFFFF'
+					DEFAULT: '#F59E0B', // Golden yellow
+					foreground: '#000000' // Black text
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -42,8 +42,8 @@ export default {
 					foreground: 'hsl(var(--muted-foreground))'
 				},
 				accent: {
-					DEFAULT: '#16A34A', // Green-600
-					foreground: '#FFFFFF'
+					DEFAULT: '#F59E0B', // Golden yellow
+					foreground: '#000000' // Black text
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
@@ -67,7 +67,7 @@ export default {
 				panAfrican: {
 					red: '#DC2626',
 					black: '#000000',
-					green: '#16A34A'
+					yellow: '#F59E0B' // Changed from green to golden yellow
 				},
 				// Custom dark theme colors
 				dark: {

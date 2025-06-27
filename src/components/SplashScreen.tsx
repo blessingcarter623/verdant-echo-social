@@ -38,7 +38,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
           transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
         />
         <motion.div
-          className="absolute bottom-0 left-0 w-full h-1/3 bg-green-600"
+          className="absolute bottom-0 left-0 w-full h-1/3 bg-yellow-500"
           initial={{ x: '-100%' }}
           animate={{ x: currentPhase >= 2 ? '0%' : '-100%' }}
           transition={{ duration: 0.8, ease: 'easeOut', delay: 0.6 }}
@@ -53,7 +53,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
         transition={{ duration: 0.8, delay: 1.5 }}
       >
         <h1 className="text-4xl font-bold text-white mb-2">
-          Vuka<span className="text-green-600">Africa</span>
+          Vuka<span className="text-yellow-500">Africa</span>
         </h1>
         <p className="text-red-500 font-medium">Awakening the Continent</p>
       </motion.div>
@@ -68,7 +68,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
         {[0, 1, 2].map((i) => (
           <motion.div
             key={i}
-            className="w-3 h-3 bg-green-600 rounded-full"
+            className="w-3 h-3 bg-yellow-500 rounded-full"
             animate={{
               scale: [1, 1.2, 1],
               opacity: [0.5, 1, 0.5],

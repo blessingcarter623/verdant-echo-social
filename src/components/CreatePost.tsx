@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Camera, User } from 'lucide-react';
+import { Camera, User, Video } from 'lucide-react';
 
 const CreatePost = () => {
   const [postContent, setPostContent] = useState('');
@@ -23,7 +23,7 @@ const CreatePost = () => {
         <div className="flex items-center space-x-3">
           <Avatar className="w-10 h-10">
             <AvatarImage src="/placeholder.svg" alt="Your avatar" />
-            <AvatarFallback className="bg-primary text-white">
+            <AvatarFallback className="bg-primary text-black">
               <User className="w-5 h-5" />
             </AvatarFallback>
           </Avatar>
@@ -43,20 +43,31 @@ const CreatePost = () => {
           />
           
           <div className="flex items-center justify-between">
-            <Button
-              type="button"
-              variant="ghost"
-              size="sm"
-              className="text-neutral-400 hover:text-primary hover:bg-primary/10"
-            >
-              <Camera className="w-4 h-4 mr-2" />
-              Photo/Video
-            </Button>
+            <div className="flex items-center space-x-2">
+              <Button
+                type="button"
+                variant="ghost"
+                size="sm"
+                className="text-neutral-400 hover:text-primary hover:bg-primary/10"
+              >
+                <Camera className="w-4 h-4 mr-2" />
+                Photo
+              </Button>
+              <Button
+                type="button"
+                variant="ghost"
+                size="sm"
+                className="text-neutral-400 hover:text-primary hover:bg-primary/10"
+              >
+                <Video className="w-4 h-4 mr-2" />
+                Video
+              </Button>
+            </div>
             
             <Button
               type="submit"
               disabled={!postContent.trim()}
-              className="bg-primary hover:bg-primary/90 text-white disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-primary hover:bg-primary/90 text-black disabled:opacity-50 disabled:cursor-not-allowed"
             >
               Post
             </Button>

@@ -13,7 +13,8 @@ const Feed = () => {
       timestamp: '2h',
       likes: 342,
       comments: 127,
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400'
+      image: 'https://images.unsplash.com/photo-1578450671530-5b6a7c9f32a8?w=600&h=400&fit=crop',
+      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4'
     },
     {
       author: 'Fatima Sankara',
@@ -23,16 +24,17 @@ const Feed = () => {
       likes: 1289,
       comments: 456,
       isLiked: true,
-      image: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73600?w=400'
+      image: 'https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop'
     },
     {
       author: 'Julius Ndaba',
       username: 'juliusndaba',
-      content: "The revolution is not coming, it's here! Captain Traore and the African liberation movements are showing us that we don't need Western approval to govern ourselves. From Burkina Faso to South Africa, the youth are rising! 🔥 #AfricanRevolution #YouthPower #Liberation",
+      content: "The revolution is not coming, it's here! Captain Traore and the African liberation movements are showing us that we don't need Western approval to govern ourselves. 🔥 Watch this powerful speech that's changing everything!",
       timestamp: '6h',
       likes: 892,
       comments: 234,
-      image: 'https://images.unsplash.com/photo-1578450671530-5b6a7c9f32a8?w=400'
+      videoUrl: 'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4',
+      image: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600&h=400&fit=crop'
     },
     {
       author: 'Nomsa Dlamini',
@@ -40,7 +42,8 @@ const Feed = () => {
       content: "Ubuntu philosophy teaches us 'I am because we are' - this is why leaders like Zuma and Traore fight for ALL their people, not just the elite. True African leadership serves the masses, not foreign interests! 🤝 #Ubuntu #AfricanLeadership #PeopleFirst",
       timestamp: '8h',
       likes: 567,
-      comments: 189
+      comments: 189,
+      image: 'https://images.unsplash.com/photo-1559717201-fbb671ff56b7?w=600&h=400&fit=crop'
     },
     {
       author: 'Kwame Osei',
@@ -49,7 +52,7 @@ const Feed = () => {
       timestamp: '12h',
       likes: 743,
       comments: 298,
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400'
+      image: 'https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=600&h=400&fit=crop'
     },
     {
       author: 'Amahle Zulu',
@@ -57,7 +60,26 @@ const Feed = () => {
       content: "From Zuma's defiance of Western imperialism to Traore's expulsion of French forces - Africa is reclaiming her dignity! No more colonial puppet masters. Our resources, our decisions, our future! 💪🏿 #AfricanSovereignty #EndNeocolonialism #AfricaRising",
       timestamp: '1d',
       likes: 1156,
-      comments: 378
+      comments: 378,
+      image: 'https://images.unsplash.com/photo-1484318571209-661cf29a69ea?w=600&h=400&fit=crop'
+    },
+    {
+      author: 'Chinwe Okoro',
+      username: 'chinweokoro',
+      content: "The strength of African women throughout history continues to inspire our liberation movement today! From Queen Nzinga to Winnie Mandela, we stand on the shoulders of giants. 👑 #AfricanWomen #Liberation #Heritage",
+      timestamp: '1d',
+      likes: 834,
+      comments: 201,
+      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=400&fit=crop'
+    },
+    {
+      author: 'Mamadou Diallo',
+      username: 'mamadoudiallo',
+      content: "Mali's rich cultural heritage reminds us of Africa's golden age before colonial disruption. The libraries of Timbuktu held knowledge that lit the world! 📚✨ Time to reclaim our intellectual sovereignty! #Mali #Timbuktu #AfricanKnowledge",
+      timestamp: '2d',
+      likes: 612,
+      comments: 145,
+      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop'
     }
   ];
 
@@ -77,6 +99,7 @@ const Feed = () => {
             comments={post.comments}
             isLiked={post.isLiked}
             image={post.image}
+            videoUrl={post.videoUrl}
           />
         ))}
       </div>

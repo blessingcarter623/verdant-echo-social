@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { Heart, MessageSquare, User, Send, MoreHorizontal } from 'lucide-react';
+import { Heart, MessageSquare, User, Send, MoreHorizontal, Play, Pause } from 'lucide-react';
 
 interface Comment {
   id: number;
@@ -21,6 +21,7 @@ interface PostCardProps {
   avatar?: string;
   content: string;
   image?: string;
+  videoUrl?: string;
   timestamp: string;
   likes: number;
   comments: number;
@@ -33,6 +34,7 @@ const PostCard: React.FC<PostCardProps> = ({
   avatar,
   content,
   image,
+  videoUrl,
   timestamp,
   likes,
   comments,
@@ -42,6 +44,7 @@ const PostCard: React.FC<PostCardProps> = ({
   const [likeCount, setLikeCount] = useState(likes);
   const [showComments, setShowComments] = useState(false);
   const [newComment, setNewComment] = useState('');
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [commentsList, setCommentsList] = useState<Comment[]>([
     { 
       id: 1,
@@ -84,6 +87,18 @@ const PostCard: React.FC<PostCardProps> = ({
     setShowComments(!showComments);
   };
 
+  const handleVideoToggle = () => {
+    const video = document.getElementById(`video-${username}-${timestamp}`) as HTMLVideoElement;
+    if (video) {
+      if (isVideoPlaying) {
+        video.pause();
+      } else {
+        video.play();
+      }
+      setIsVideoPlaying(!isVideoPlaying);
+    }
+  };
+
   const handleAddComment = () => {
     if (newComment.trim()) {
       const newCommentObj: Comment = {
@@ -110,7 +125,6 @@ const PostCard: React.FC<PostCardProps> = ({
             likes: comment.isLiked ? comment.likes - 1 : comment.likes + 1
           };
         }
-        // Handle nested replies
         return {
           ...comment,
           replies: comment.replies.map(reply => {
@@ -159,7 +173,7 @@ const PostCard: React.FC<PostCardProps> = ({
   const CommentComponent: React.FC<{ comment: Comment; isReply?: boolean }> = ({ comment, isReply = false }) => (
     <div className={`flex items-start space-x-2 ${isReply ? 'ml-8 mt-2' : ''}`}>
       <Avatar className="w-6 h-6">
-        <AvatarFallback className="bg-primary text-white text-xs">
+        <AvatarFallback className="bg-primary text-black text-xs">
           {comment.author[0]}
         </AvatarFallback>
       </Avatar>
@@ -191,11 +205,10 @@ const PostCard: React.FC<PostCardProps> = ({
           )}
         </div>
         
-        {/* Reply Input */}
         {replyingTo === comment.id && (
           <div className="flex items-center space-x-2 mt-2">
             <Avatar className="w-5 h-5">
-              <AvatarFallback className="bg-primary text-white text-xs">
+              <AvatarFallback className="bg-primary text-black text-xs">
                 You
               </AvatarFallback>
             </Avatar>
@@ -211,14 +224,13 @@ const PostCard: React.FC<PostCardProps> = ({
               size="sm"
               onClick={() => handleReplyToComment(comment.id)}
               disabled={!replyContent.trim()}
-              className="bg-primary hover:bg-primary/90 text-white disabled:opacity-50 h-8 px-2"
+              className="bg-primary hover:bg-primary/90 text-black disabled:opacity-50 h-8 px-2"
             >
               <Send className="w-3 h-3" />
             </Button>
           </div>
         )}
 
-        {/* Render Replies */}
         {comment.replies.map((reply) => (
           <CommentComponent key={reply.id} comment={reply} isReply={true} />
         ))}
@@ -232,7 +244,7 @@ const PostCard: React.FC<PostCardProps> = ({
         <div className="flex items-center space-x-3">
           <Avatar className="w-10 h-10">
             <AvatarImage src={avatar} alt={author} />
-            <AvatarFallback className="bg-primary text-white">
+            <AvatarFallback className="bg-primary text-black">
               <User className="w-5 h-5" />
             </AvatarFallback>
           </Avatar>
@@ -248,7 +260,33 @@ const PostCard: React.FC<PostCardProps> = ({
 
       <CardContent className="pt-0">
         <p className="text-white text-sm leading-relaxed mb-3">{content}</p>
-        {image && (
+        
+        {videoUrl && (
+          <div className="relative rounded-lg overflow-hidden mb-3">
+            <video
+              id={`video-${username}-${timestamp}`}
+              className="w-full h-auto max-h-96 object-cover"
+              poster={image}
+              controls={false}
+              onClick={handleVideoToggle}
+            >
+              <source src={videoUrl} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div 
+              className="absolute inset-0 flex items-center justify-center cursor-pointer bg-black/20 hover:bg-black/30 transition-colors"
+              onClick={handleVideoToggle}
+            >
+              {isVideoPlaying ? (
+                <Pause className="w-16 h-16 text-white drop-shadow-lg" />
+              ) : (
+                <Play className="w-16 h-16 text-white drop-shadow-lg" />
+              )}
+            </div>
+          </div>
+        )}
+        
+        {image && !videoUrl && (
           <div className="rounded-lg overflow-hidden">
             <img
               src={image}
@@ -284,18 +322,15 @@ const PostCard: React.FC<PostCardProps> = ({
           </Button>
         </div>
 
-        {/* Comments Section */}
         {showComments && (
           <div className="w-full space-y-3">
-            {/* Existing Comments */}
             {commentsList.map((comment) => (
               <CommentComponent key={comment.id} comment={comment} />
             ))}
 
-            {/* Add Comment Input */}
             <div className="flex items-center space-x-2 pt-2 border-t border-neutral-600/20">
               <Avatar className="w-6 h-6">
-                <AvatarFallback className="bg-primary text-white text-xs">
+                <AvatarFallback className="bg-primary text-black text-xs">
                   You
                 </AvatarFallback>
               </Avatar>
@@ -311,7 +346,7 @@ const PostCard: React.FC<PostCardProps> = ({
                 size="sm"
                 onClick={handleAddComment}
                 disabled={!newComment.trim()}
-                className="bg-primary hover:bg-primary/90 text-white disabled:opacity-50"
+                className="bg-primary hover:bg-primary/90 text-black disabled:opacity-50"
               >
                 <Send className="w-3 h-3" />
               </Button>
