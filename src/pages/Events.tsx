@@ -1,11 +1,10 @@
 
 import React, { useState } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import { MapPin, Heart, MessageSquare, Share2, Calendar, Clock, Users } from 'lucide-react';
-import FloatingNavbar from '@/components/FloatingNavbar';
+import Navbar from '@/components/Navbar';
 
 const Events = () => {
   const [likedEvents, setLikedEvents] = useState<Set<number>>(new Set());
@@ -66,10 +65,10 @@ const Events = () => {
 
   return (
     <div className="min-h-screen bg-black text-white pb-20">
-      <FloatingNavbar />
+      <Navbar />
       
       {/* Header */}
-      <div className="sticky top-0 z-40 bg-black/80 backdrop-blur-md border-b border-gray-800/50 p-4">
+      <div className="sticky top-14 z-40 bg-black/80 backdrop-blur-md border-b border-gray-800/50 p-4">
         <h1 className="text-2xl font-bold text-center">✨ Events</h1>
       </div>
 
