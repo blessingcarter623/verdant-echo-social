@@ -9,7 +9,7 @@ const FloatingNavbar = () => {
 
   const navItems = [
     { 
-      emoji: '🏠', 
+      emoji: '🏛️', 
       label: 'Home', 
       path: '/',
       active: location.pathname === '/'
@@ -21,25 +21,25 @@ const FloatingNavbar = () => {
       active: location.pathname === '/search'
     },
     { 
-      emoji: '🎉', 
+      emoji: '🎭', 
       label: 'Events', 
       path: '/events',
       active: location.pathname === '/events'
     },
     { 
-      emoji: '👥', 
+      emoji: '🌍', 
       label: 'Groups', 
       path: '/groups',
       active: location.pathname === '/groups'
     },
     { 
-      emoji: '💬', 
+      emoji: '💌', 
       label: 'Messages', 
       path: '/messages',
       active: location.pathname === '/messages'
     },
     { 
-      emoji: '👤', 
+      emoji: '👑', 
       label: 'Profile', 
       path: '/profile',
       active: location.pathname === '/profile'

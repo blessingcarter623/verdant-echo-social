@@ -14,7 +14,7 @@ const Navbar = () => {
 
   const navItems = [
     { 
-      emoji: '🏠', 
+      emoji: '🏛️', 
       label: 'Home', 
       path: '/',
       active: location.pathname === '/'
@@ -26,26 +26,26 @@ const Navbar = () => {
       active: location.pathname === '/search'
     },
     { 
-      emoji: '🎉', 
+      emoji: '🎭', 
       label: 'Events', 
       path: '/events',
       active: location.pathname === '/events'
     },
     { 
-      emoji: '👥', 
+      emoji: '🌍', 
       label: 'Groups', 
       path: '/groups',
       active: location.pathname === '/groups'
     },
     { 
-      emoji: '💬', 
+      emoji: '💌', 
       label: 'Messages', 
       path: '/messages',
       active: location.pathname === '/messages',
       badge: unreadMessages
     },
     { 
-      emoji: '📝', 
+      emoji: '📚', 
       label: 'Blog', 
       path: '/blog',
       active: location.pathname === '/blog'

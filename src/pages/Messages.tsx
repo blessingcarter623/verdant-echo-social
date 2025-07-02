@@ -30,16 +30,16 @@ const Messages = () => {
       online: true
     },
     {
-      name: 'Pieter van der Merwe',
-      username: 'pieter_vdm',
+      name: 'Sipho Mahlangu',
+      username: 'sipho_mah',
       lastMessage: 'Did you catch the Springboks game?',
       time: '1h',
       unread: 1,
       online: false
     },
     {
-      name: 'Aisha Patel',
-      username: 'aisha_p',
+      name: 'Lerato Molefe',
+      username: 'lerato_m',
       lastMessage: 'The sunset from Table Mountain was incredible!',
       time: '3h',
       unread: 0,
