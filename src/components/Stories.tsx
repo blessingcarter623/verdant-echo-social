@@ -13,7 +13,7 @@ const Stories = () => {
       username: 'thandi_mthembu',
       hasStory: true,
       isViewed: false,
-      avatar: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=150&h=150&fit=crop&crop=face'
+      avatar: 'https://images.unsplash.com/photo-1528151215936-7ee1b5427d7e?w=150&h=150&fit=crop&crop=face'
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ const Stories = () => {
       username: 'sizani_dlamini',
       hasStory: true,
       isViewed: true,
-      avatar: 'https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=150&h=150&fit=crop&crop=face'
+      avatar: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=150&h=150&fit=crop&crop=face'
     },
     {
       id: 3,
@@ -29,7 +29,7 @@ const Stories = () => {
       username: 'naledi_khumalo',
       hasStory: true,
       isViewed: false,
-      avatar: 'https://images.unsplash.com/photo-1506863530036-1efeddceb993?w=150&h=150&fit=crop&crop=face'
+      avatar: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=150&h=150&fit=crop&crop=face'
     },
     {
       id: 4,
@@ -37,7 +37,7 @@ const Stories = () => {
       username: 'bongani_zulu',
       hasStory: true,
       isViewed: false,
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face'
+      avatar: 'https://images.unsplash.com/photo-1566492031773-4f4e44671d66?w=150&h=150&fit=crop&crop=face'
     },
     {
       id: 5,
@@ -45,7 +45,7 @@ const Stories = () => {
       username: 'zinhle_ndaba',
       hasStory: true,
       isViewed: true,
-      avatar: 'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=150&h=150&fit=crop&crop=face'
+      avatar: 'https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?w=150&h=150&fit=crop&crop=face'
     }
   ]);
 
