@@ -13,7 +13,7 @@ const Feed = () => {
       timestamp: '2h',
       likes: 342,
       comments: 127,
-      image: 'https://images.unsplash.com/photo-1578450671530-5b6a7c9f32a8?w=600&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop',
       videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4'
     },
     {
@@ -24,7 +24,7 @@ const Feed = () => {
       likes: 1289,
       comments: 456,
       isLiked: true,
-      image: 'https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop'
+      image: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=600&h=400&fit=crop'
     },
     {
       author: 'Siyabonga Ndaba',
@@ -34,7 +34,7 @@ const Feed = () => {
       likes: 892,
       comments: 234,
       videoUrl: 'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4',
-      image: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600&h=400&fit=crop'
+      image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=600&h=400&fit=crop'
     },
     {
       author: 'Nomsa Dlamini',
@@ -43,7 +43,7 @@ const Feed = () => {
       timestamp: '8h',
       likes: 567,
       comments: 189,
-      image: 'https://images.unsplash.com/photo-1559717201-fbb671ff56b7?w=600&h=400&fit=crop'
+      image: 'https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=600&h=400&fit=crop'
     },
     {
       author: 'Mandla Khumalo',
@@ -52,7 +52,7 @@ const Feed = () => {
       timestamp: '12h',
       likes: 743,
       comments: 298,
-      image: 'https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=600&h=400&fit=crop'
+      image: 'https://images.unsplash.com/photo-1506863530036-1efeddceb993?w=600&h=400&fit=crop'
     },
     {
       author: 'Thandiwe Zulu',
@@ -61,7 +61,7 @@ const Feed = () => {
       timestamp: '1d',
       likes: 1156,
       comments: 378,
-      image: 'https://images.unsplash.com/photo-1484318571209-661cf29a69ea?w=600&h=400&fit=crop'
+      image: 'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=600&h=400&fit=crop'
     },
     {
       author: 'Palesa Mogale',
@@ -70,7 +70,7 @@ const Feed = () => {
       timestamp: '1d',
       likes: 834,
       comments: 201,
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=400&fit=crop'
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop'
     },
     {
       author: 'Lethabo Motsepe',
@@ -79,7 +79,7 @@ const Feed = () => {
       timestamp: '2d',
       likes: 612,
       comments: 145,
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop'
+      image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop'
     }
   ];
 
