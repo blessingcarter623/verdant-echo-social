@@ -8,7 +8,7 @@ const Feed = () => {
   const samplePosts = [
     {
       author: 'Thabo Mthembu',
-      username: 'thabomthembu',
+      username: 'thabo_mthembu',
       content: "President Zuma's legacy continues to inspire young South Africans! His fight against economic apartheid and commitment to radical economic transformation shows us the path forward. We must reclaim our land and resources! 🇿🇦 #ZumaLegacy #EconomicFreedom #LandReform",
       timestamp: '2h',
       likes: 342,
@@ -17,8 +17,8 @@ const Feed = () => {
       videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4'
     },
     {
-      author: 'Fatima Sankara',
-      username: 'fatimasankara',
+      author: 'Nonhlanhla Mabaso',
+      username: 'nonhlanhla_mabaso',
       content: "Ibrahim Traore is showing the world what true African leadership looks like! 🇧🇫 At 34, he's proving that our youth can lead revolutionary change. Burkina Faso's sovereignty movement is inspiration for all of Africa. No more puppet governments! ✊🏿 #IbrahimTraore #AfricanSovereignty #BurkinaFaso",
       timestamp: '4h',
       likes: 1289,
@@ -27,8 +27,8 @@ const Feed = () => {
       image: 'https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop'
     },
     {
-      author: 'Julius Ndaba',
-      username: 'juliusndaba',
+      author: 'Siyabonga Ndaba',
+      username: 'siyabonga_ndaba',
       content: "The revolution is not coming, it's here! Captain Traore and the African liberation movements are showing us that we don't need Western approval to govern ourselves. 🔥 Watch this powerful speech that's changing everything!",
       timestamp: '6h',
       likes: 892,
@@ -38,7 +38,7 @@ const Feed = () => {
     },
     {
       author: 'Nomsa Dlamini',
-      username: 'nomsadlamini',
+      username: 'nomsa_dlamini',
       content: "Ubuntu philosophy teaches us 'I am because we are' - this is why leaders like Zuma and Traore fight for ALL their people, not just the elite. True African leadership serves the masses, not foreign interests! 🤝 #Ubuntu #AfricanLeadership #PeopleFirst",
       timestamp: '8h',
       likes: 567,
@@ -46,8 +46,8 @@ const Feed = () => {
       image: 'https://images.unsplash.com/photo-1559717201-fbb671ff56b7?w=600&h=400&fit=crop'
     },
     {
-      author: 'Kwame Osei',
-      username: 'kwameosei',
+      author: 'Mandla Khumalo',
+      username: 'mandla_khumalo',
       content: "Watching Captain Ibrahim Traore speak truth to power reminds me why Sankara's vision lives on! 'A soldier without political or ideological training is a potential criminal.' These young leaders understand liberation! 🇬🇭🇧🇫 #ThomasSankara #IbrahimTraore #PanAfricanism",
       timestamp: '12h',
       likes: 743,
@@ -55,8 +55,8 @@ const Feed = () => {
       image: 'https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=600&h=400&fit=crop'
     },
     {
-      author: 'Amahle Zulu',
-      username: 'amahlezulu',
+      author: 'Thandiwe Zulu',
+      username: 'thandiwe_zulu',
       content: "From Zuma's defiance of Western imperialism to Traore's expulsion of French forces - Africa is reclaiming her dignity! No more colonial puppet masters. Our resources, our decisions, our future! 💪🏿 #AfricanSovereignty #EndNeocolonialism #AfricaRising",
       timestamp: '1d',
       likes: 1156,
@@ -64,8 +64,8 @@ const Feed = () => {
       image: 'https://images.unsplash.com/photo-1484318571209-661cf29a69ea?w=600&h=400&fit=crop'
     },
     {
-      author: 'Chinwe Okoro',
-      username: 'chinweokoro',
+      author: 'Palesa Mogale',
+      username: 'palesa_mogale',
       content: "The strength of African women throughout history continues to inspire our liberation movement today! From Queen Nzinga to Winnie Mandela, we stand on the shoulders of giants. 👑 #AfricanWomen #Liberation #Heritage",
       timestamp: '1d',
       likes: 834,
@@ -73,8 +73,8 @@ const Feed = () => {
       image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=400&fit=crop'
     },
     {
-      author: 'Mamadou Diallo',
-      username: 'mamadoudiallo',
+      author: 'Lethabo Motsepe',
+      username: 'lethabo_motsepe',
       content: "Mali's rich cultural heritage reminds us of Africa's golden age before colonial disruption. The libraries of Timbuktu held knowledge that lit the world! 📚✨ Time to reclaim our intellectual sovereignty! #Mali #Timbuktu #AfricanKnowledge",
       timestamp: '2d',
       likes: 612,

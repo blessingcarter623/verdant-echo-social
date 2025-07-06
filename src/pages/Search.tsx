@@ -20,10 +20,12 @@ const Search = () => {
   ];
 
   const suggestedUsers = [
-    { name: 'Thabo Mokwena', username: 'thabo_mk', location: 'Johannesburg' },
-    { name: 'Nomsa Dlamini', username: 'nomsa_d', location: 'Durban' },
-    { name: 'Sibongile Ndaba', username: 'sibongile_n', location: 'Cape Town' },
-    { name: 'Mandla Sithole', username: 'mandla_s', location: 'Pretoria' }
+    { name: 'Thabo Mokwena', username: 'thabo_mokwena', location: 'Johannesburg' },
+    { name: 'Nomsa Dlamini', username: 'nomsa_dlamini', location: 'Durban' },
+    { name: 'Sibongile Ndaba', username: 'sibongile_ndaba', location: 'Cape Town' },
+    { name: 'Mandla Sithole', username: 'mandla_sithole', location: 'Pretoria' },
+    { name: 'Zinhle Mthembu', username: 'zinhle_mthembu', location: 'Bloemfontein' },
+    { name: 'Bongani Zulu', username: 'bongani_zulu', location: 'Port Elizabeth' }
   ];
 
   return (

@@ -48,7 +48,7 @@ const PostCard: React.FC<PostCardProps> = ({
   const [commentsList, setCommentsList] = useState<Comment[]>([
     { 
       id: 1,
-      author: 'Amara Kone', 
+      author: 'Ntombi Mthembu', 
       content: 'This is so inspiring! Our ancestors\' wisdom guides us. Africa rising! 🌍✊🏿', 
       timestamp: '1h',
       likes: 12,
@@ -56,7 +56,7 @@ const PostCard: React.FC<PostCardProps> = ({
       replies: [
         {
           id: 2,
-          author: 'Kofi Mensah',
+          author: 'Sizwe Khumalo',
           content: 'Ubuntu philosophy at its finest! "I am because we are"',
           timestamp: '45m',
           likes: 5,
@@ -67,8 +67,8 @@ const PostCard: React.FC<PostCardProps> = ({
     },
     { 
       id: 3,
-      author: 'Kwame Asante', 
-      content: 'Great work sister! We must continue to educate our people about our rich heritage. The motherland calls! 🇬🇭🇳🇬🇰🇪', 
+      author: 'Busisiwe Dlamini', 
+      content: 'Great work sister! We must continue to educate our people about our rich heritage. The motherland calls! 🇿🇦❤️🖤💚', 
       timestamp: '2h',
       likes: 8,
       isLiked: false,

@@ -9,40 +9,40 @@ const Stories = () => {
   const [stories] = useState([
     {
       id: 1,
-      author: 'Kemi Adebayo',
-      username: 'kemiadebayo',
+      author: 'Thandi Mthembu',
+      username: 'thandi_mthembu',
       hasStory: true,
       isViewed: false,
       avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face'
     },
     {
       id: 2,
-      author: 'David Ochieng',
-      username: 'davidochieng',
+      author: 'Sizani Dlamini',
+      username: 'sizani_dlamini',
       hasStory: true,
       isViewed: true,
       avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face'
     },
     {
       id: 3,
-      author: 'Amina Hassan',
-      username: 'aminahassan',
+      author: 'Naledi Khumalo',
+      username: 'naledi_khumalo',
       hasStory: true,
       isViewed: false,
       avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=face'
     },
     {
       id: 4,
-      author: 'Joseph Mensah',
-      username: 'josephmensah',
+      author: 'Bongani Zulu',
+      username: 'bongani_zulu',
       hasStory: true,
       isViewed: false,
       avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
     },
     {
       id: 5,
-      author: 'Fatou Diallo',
-      username: 'fatoudiallo',
+      author: 'Zinhle Ndaba',
+      username: 'zinhle_ndaba',
       hasStory: true,
       isViewed: true,
       avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face'
